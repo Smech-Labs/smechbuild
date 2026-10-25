@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+/work/
+/repo/
+/cache/
+/buildd.db
+smechbuild.toml

@@ -1,0 +1,23 @@
+Source: mpc
+Version: 1.3.1
+Revision: 1
+Maintainer: Smech Labs <smech@smech.xyz>
+Homepage: https://www.multiprecision.org/mpc/
+Build-System: autotools
+Build-Depends: libmpfr-dev, libgmp-dev, libc-dev, libgcc-s1
+Sources:
+ ab642492f5cf882b74aa0cb730cd410a81edcdbec895183ce930e706c1c759b8 773573 https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz
+Configure-Args: --disable-static
+
+Package: libmpc3
+Description: GNU multiple precision complex arithmetic library
+Files:
+ usr/lib/libmpc.so.*
+
+Package: libmpc-dev
+Description: GNU multiple precision complex arithmetic library, development files
+Depends: libmpc3 (= ${binary:Version}), libmpfr-dev
+Files:
+ usr/include/mpc.h
+ usr/lib/libmpc.so
+ usr/share/info/*

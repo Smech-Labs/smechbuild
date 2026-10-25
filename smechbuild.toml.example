@@ -1,0 +1,9 @@
+pkgs = "pkgs"
+repo = "repo"
+work = "work"
+cache = "cache"
+db = "buildd.db"
+spk = "spk"
+triplet = "x86_64-smechos-linux-gnu"
+toolchain = "/path/to/x-tools/x86_64-smechos-linux-gnu"
+jobs = 2

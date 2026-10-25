@@ -1,0 +1,24 @@
+Source: gmp
+Version: 6.3.0
+Revision: 1
+Maintainer: Smech Labs <smech@smech.xyz>
+Homepage: https://gmplib.org
+Build-System: autotools
+Build-Depends: libc-dev, libgcc-s1
+Sources:
+ a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898 2094196 https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz
+Configure-Args: --disable-static
+
+Package: libgmp10
+Description: GNU multiple precision arithmetic library
+Files:
+ usr/lib/libgmp.so.*
+
+Package: libgmp-dev
+Description: GNU multiple precision arithmetic library, development files
+Depends: libgmp10 (= ${binary:Version})
+Files:
+ usr/include/gmp.h
+ usr/lib/libgmp.so
+ usr/lib/pkgconfig/gmp.pc
+ usr/share/info/*

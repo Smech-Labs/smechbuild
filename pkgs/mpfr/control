@@ -1,0 +1,26 @@
+Source: mpfr
+Version: 4.2.1
+Revision: 1
+Maintainer: Smech Labs <smech@smech.xyz>
+Homepage: https://www.mpfr.org
+Build-System: autotools
+Build-Depends: libgmp-dev, libc-dev, libgcc-s1
+Sources:
+ 277807353a6726978996945af13e52829e3abd7a9a5b7fb2793894e18f1fcbb2 1493608 https://www.mpfr.org/mpfr-4.2.1/mpfr-4.2.1.tar.xz
+Configure-Args: --disable-static
+
+Package: libmpfr6
+Description: GNU multiple precision floating-point library
+Files:
+ usr/lib/libmpfr.so.*
+
+Package: libmpfr-dev
+Description: GNU multiple precision floating-point library, development files
+Depends: libmpfr6 (= ${binary:Version}), libgmp-dev
+Files:
+ usr/include/mpf2mpfr.h
+ usr/include/mpfr.h
+ usr/lib/libmpfr.so
+ usr/lib/pkgconfig/mpfr.pc
+ usr/share/info/*
+ usr/share/doc/*
